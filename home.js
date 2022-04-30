@@ -21,9 +21,10 @@
     'Welcome back, Andrew'
 */
 
-//CODE HERE
-
-
+const greetUser = (username) => {
+    return console.log('Welcome back,' + username + '!')
+}
+greetUser('Andrew');
 
 
 
@@ -49,9 +50,15 @@
 
 const deliveryAreaZipCodes = [85205, 85204, 85203, 85213, 85206]
 
-//CODE HERE
+const canWeDeliver =  (zip) => {
+    if(deliveryAreaZipCodes.includes(zip) == true){
+        console.log(`You're in our delivery zone! 1`);
+    }else{
+        console.log(`Sorry, we can't deliver to that address 1`);
+    }
+}
 
-
+canWeDeliver(85205);
 
 /* 
     Problem 2 Continued
@@ -70,21 +77,24 @@ const deliveryAreaZipCodes = [85205, 85204, 85203, 85213, 85206]
     Name your new function `canWeDeliverTwo`.
 */
 
-// CODE HERE
+//const deliveryAreaZipCodes = [85205, 85204, 85203, 85213, 85206]
+
+function canWeDeliverTwo(num){
+    let answer = [deliveryAreaZipCodes];
+    for(i = 0; i < deliveryAreaZipCodes.length; i++){
+        if (deliveryAreaZipCodes[i] == num) {
+        answer = 'Youre in our delivery zone! 2';
+        }else if (canWeDeliverTwo != num) {
+        answer = `Sorry, we can't deliver to that address 2`;
+        }
+        return answer
+    }
+}
+console.log(canWeDeliverTwo(8525));
 
 
 //////////////////PROBLEM 3////////////////////
-/* 
-    Below is an array of objects that have some
-    information about a couple of deals that are
-    available at the restaurant currently. 
 
-    You are going to access the object's properties 
-    and change some values. Don't edit the array 
-    directly, let's use the `replace` method.
-
-    Read on for more instructions.
-*/
 
 const deals = [
     {
@@ -97,7 +107,17 @@ const deals = [
     }
 ]
 
-/*
+/* 
+    Below is an array of objects that have some
+    information about a couple of deals that are
+    available at the restaurant currently. 
+
+    You are going to access the object's properties 
+    and change some values. Don't edit the array 
+    directly, let's use the `replace` method.
+
+    Read on for more instructions.
+
     The owner has decided to take the 15% off
     deal down to 10%.
 
@@ -106,8 +126,9 @@ const deals = [
     to replace the 15 with a 10.
 */
 
-//CODE HERE
-
+let newDeal = deals[0].title;
+newDeal = newDeal.replace('15','10%');
+console.log(newDeal);
 
 
 /*
@@ -123,4 +144,7 @@ const deals = [
     to be displaying wrong on the live site.
 */
 
-//CODE HERE
+let april = deals[1].desc;
+april = april.replace('March','April');
+april = april.trim();
+console.log(april);

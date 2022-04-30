@@ -35,7 +35,10 @@ const cart = [
 
 //CODE HERE
 
-// const summedPrice = cart.reduce(/* CALLBACK HERE */)
+const summedPrice = cart.reduce(function (prev, cur) {
+return prev + cur.price;
+ }, 0);
+console.log(summedPrice);
 
 
 //////////////////PROBLEM 2////////////////////
@@ -58,7 +61,7 @@ const calcFinalPrice = (cartTotal, couponValue, tax) => {
     return (Math.round(final *100) / 100).toFixed(2);
 }
 console.log(calcFinalPrice(100,1.00,3.69));
-//(Math.round(num * 100) / 100).toFixed(2);
+
 
 //////////////////PROBLEM 3////////////////////
 /*  
@@ -78,16 +81,24 @@ console.log(calcFinalPrice(100,1.00,3.69));
     and why you chose those data types. 
 
     Your object should have at least 4 properties. 
-*/
+*//*
+Customer object:
 
-/*
-    TEXT ANSWER HERE
+Customer Name / string type
+phone / number type
+paymentType / Array[cash, debit, credit]
+total / number type
 
-*/
 
-/*
+*//*
     Now, create a customer object following your own
     guidelines.
 */
 
-//CODE HERE
+const customer = {
+
+    name: name, //string 
+    phone: phone, // num
+    paymentType: paymentType[cash,debit,credit], //array
+    total: total // num
+}
