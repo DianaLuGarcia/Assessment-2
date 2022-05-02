@@ -29,9 +29,18 @@
     stored on the object.
 */
 
-//CODE HERE
+class ticket {
+    constructor(items, orderTime,customerId){
+    ticket.status = 'queued'
+    ticket.status = newStatus;
+    console.log(this.status)
+ 
+    newStatus = (updateStatus) => {
+    console.log('The order for customer', customerId, 'is now', newStatus);
+        }
+    }
 
-
+//console.log(Ticket.firstTicket);
 
 /*
     Create a new instance of your class.
@@ -39,13 +48,20 @@
 
     You can use this sample data or make
     up your own:
-    food ordered: pizza, bread, and soda
+    class.updateStatus(food ordered: pizza, bread, and soda
     ordered at: 7:03 PM
-    customer: 575
+    customer: 575)
 */
 
-//CODE HERE
-
+    firstTicket = (cb) => {
+    this.items = 'pizza, bread, and soda',
+    this.ordered = '7:03 PM',
+    this.customer =  575
+    this.items = items;
+    this.ordered = orderTime;
+    this.customer = customerId;
+    cb(newStatus);
+    }
 
 /*
     Call the `updateStatus` method on
@@ -53,4 +69,7 @@
     'cooking'
 */
 
-//CODE HERE
+updateStatus(newStatus) {
+    return newStatus = 'Now Cooking!'
+    }
+}

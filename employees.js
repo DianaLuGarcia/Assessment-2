@@ -19,9 +19,20 @@
     stored on the object.
 */
 
-//CODE HERE
+class employees {
+    constructor(name,shifts){
+        this.name = name;
+        this.shifts = shifts;
+    }
+} 
 
+getSchedule = () => {
+    return console.log(this.name,'works on',this.shifts)
+    }  
 
+ // this.employee1 = 'Peter';
+        // this.employee2 = 'Wendy'
+        // this.employee3 = 'Smee'
 
 /*
     Create a new instance of your class.
@@ -33,14 +44,17 @@
     shifts: weekday mornings, weekday afternoons
 */
 
-//CODE HERE
+const empOne = new employees();{
+    this.name = 'Peter',
+    this.shifts = 'Weekday mornings',"Weekday afternoons"
+    }
 
 /*
     Call the `getSchedule` method on the
     `empOne` object.
 */
 
-//CODE HERE
+getSchedule(empOne);
 
 
 /*
@@ -55,9 +69,12 @@
     dot or bracket notation.
 */
 
-//CODE HERE
+const empTwo = new employees();{
+    this.name = 'Nick',
+    this.shifts = 'Weekday afternoon',"Weekday morning"
+    }
 
-
+getSchedule(empTwo);
 
 //////////////////PROBLEM 2////////////////////
 /*  
@@ -82,9 +99,20 @@
     the employees array. 
 */
 
-//CODE HERE
-
-
+class Manager extends employees {
+    constructor(name,shifts,employees){
+    super(name,shift);
+        this.name = name;
+        this.shifts = shifts;
+        this.employees = [];
+    }
+}
+getEmployees = (emp) => {
+    return console.log(name, 'manages', employees);
+}
+getEmployee = (emp) => {
+    employees[emp];
+}
 
 /*
     Create a new instance of your class.

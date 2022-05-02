@@ -30,7 +30,14 @@
     'kids'
 */
 
-//CODE HERE
+const pizza = {
+    'name': 'Pepperoni',
+    price: 15.99,
+    'category': 'Entree',
+    popularity: 1,
+    rating: 5/5,
+    tags: ['Meat','One topping','Popular','Kids']
+}
 
 
 
@@ -42,7 +49,7 @@
     Use dot notation to access the value.
 */
 
-//CODE HERE
+console.log(pizza.popularity);
 
 
 /*
@@ -52,7 +59,7 @@
     get the value.
 */
 
-//CODE HERE
+console.log(pizza.tags[1]);
 
 
 /*
@@ -62,7 +69,8 @@
     Print the value of your new price variable.
 */
 
-//CODE HERE
+let pizzaPrice = pizza.price;
+console.log(pizzaPrice);
 
 
 /*
@@ -72,7 +80,8 @@
     Print the value of your category variable. 
 */
 
-//CODE HERE
+let pizzaCategory = pizza.category;
+console.log(pizzaCategory);
 
 
 //////////////////PROBLEM 3////////////////////
@@ -87,7 +96,48 @@
     data in some functions that you'll write.
 */
 
-//CODE HERE
+const foodArr = [
+    {    
+'name': 'Meat Lovers Pizza',
+price: 18.99,
+'category': 'Entree',
+popularity: 3,
+rating: 70,
+tags: ['Meat','Multiple toppings','Food Lover']
+},
+    {
+'name': 'Jalapeño Poppers',
+price: 5.99,
+'category': 'Appetizer',
+popularity: 2,
+rating: 100,
+tags: ['Appetizer','Popular','Spicy']
+},
+{
+'name': 'Chicken Wings',
+price: 8.99,
+'category': 'Appetizer',
+popularity: 1,
+rating: 70,
+tags: ['Chicken','Appetizer','Spicy']
+},
+{
+'name': 'Hot Dog',
+price: 2.99,
+'category': 'Entree',
+popularity: 4,
+rating: 80,
+tags: ['Kids','Classic','Fast']
+},
+{
+'name': 'Macaroni',
+price: 7.99,
+'category': 'Entree',
+popularity: 2,
+rating: 80,
+tags: ['Cheese','Kids','Fast']
+}
+]
 
 
 
@@ -103,11 +153,9 @@
     your food objects has.
 */
 
-//CODE HERE
 
-// const filteredFood = foodArr.filter(/* CALLBACK HERE */)
-
-
+let filteredFood = foodArr.filter(food => food.tags.includes('Spicy'))
+console.log(filteredFood);
 
 //////////////////PROBLEM 5////////////////////
 /* 
@@ -118,11 +166,15 @@
     below a certain price, or any other combo.
 
     Write a function called `filterByProperty`
-    that takes in three arguments: `property`, 
-    `number`, and `type. 
+    that takes in three arguments: 
+    `property`, 
+    `number`, 
+    and `type. 
 
-    The property will be a string (rating,
-    popularity, or price)
+    The property will be a string 
+    (rating,
+    popularity, 
+    or price)
 
     The number will be the number that you want
     to compare against 
@@ -137,25 +189,50 @@
 
     Use the filter method to filter the foodArr
 
-        In the callback, check if the `type` is `above`, 
-        if it is, return objects whose value for the given
-        property is greater than the `number` passed in
+In the callback, 
+check if the `type` is `above`, 
+if it is, return objects whose value for the given
+property is greater than the `number` passed in
 
-        If the type isn't `below`, return objects whose
-        value for the given property is less than the 
-        `number` passed in
+
+If the type IS below, 
+return objects whose value for the given property 
+is less than the number passed in"
     
     Return the filtered array from the entire function
 */
 
-//CODE HERE
+// function filterByProperty (property,number,type){
+//     let filteredArray = foodArr.filter(function (property,number,type){
+//         return 
+// rating,
+// popularity, 
+// or price
+//     check the property against the number and add above or below to obj
+const filterByProperty = (property,number,cb) => {
+if (foodArr.filter(type => foodArr.Filter.includes('above'))){
+}
+}
+
+const addFilter = (property,number) => {
+        if (property <= number) {
+            foodArr.Filter = 'below',number;
+        }else if(property >= number){
+            foodArr.Filter = 'above',number;
+        }
+    return addFilter();
+}
+    
 
 
+
+//filterByProperty(popularity,1)
+getUserByProperty(rating,80)
 /*
     Invoke the `filterByProperty` function passing
-    in a value for each paramter.
+    in a value for each parameter.
 
     You'll have to console.log to see the filtered array
 */
 
-//CODE HERE
+console.log(getUserByProperty());
