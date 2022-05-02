@@ -19,7 +19,7 @@
     stored on the object.
 */
 
-class employees {
+class Employee {
     constructor(name,shifts){
         this.name = name;
         this.shifts = shifts;
@@ -29,10 +29,6 @@ class employees {
 getSchedule = () => {
     return console.log(this.name,'works on',this.shifts)
     }  
-
- // this.employee1 = 'Peter';
-        // this.employee2 = 'Wendy'
-        // this.employee3 = 'Smee'
 
 /*
     Create a new instance of your class.
@@ -44,7 +40,7 @@ getSchedule = () => {
     shifts: weekday mornings, weekday afternoons
 */
 
-const empOne = new employees();{
+const empOne = new Employee();{
     this.name = 'Peter',
     this.shifts = 'Weekday mornings',"Weekday afternoons"
     }
@@ -69,7 +65,7 @@ getSchedule(empOne);
     dot or bracket notation.
 */
 
-const empTwo = new employees();{
+const empTwo = new Employee();{
     this.name = 'Nick',
     this.shifts = 'Weekday afternoon',"Weekday morning"
     }
@@ -99,7 +95,7 @@ getSchedule(empTwo);
     the employees array. 
 */
 
-class Manager extends employees {
+class Manager extends Employee {
     constructor(name,shifts,employees){
     super(name,shift);
         this.name = name;
@@ -108,10 +104,10 @@ class Manager extends employees {
     }
 }
 getEmployees = (emp) => {
-    return console.log(name, 'manages', employees);
+    return console.log(this.name, 'manages', employees);
 }
-getEmployee = (emp) => {
-    employees[emp];
+addEmployee = (emp) => {
+    return employees[emp];
 }
 
 /*
@@ -125,7 +121,11 @@ getEmployee = (emp) => {
     employees: Cece and Schmidt
 */
 
-//CODE HERE
+    const manager = new Employee();{
+    this.name = 'Captain Hook',
+    this.shifts = 'Weekdays Morning','Weekday Afternoon','Weekend Morning','Weekend Afternoon'
+    this.employees = 'Wendy','Schmidt';
+    }
 
 
 /*
@@ -133,7 +133,7 @@ getEmployee = (emp) => {
     `manager` object.  
 */
 
-//CODE HERE
+getEmployees(manager);
 
 /*
     Call the `addEmployee` method on the 
@@ -141,7 +141,7 @@ getEmployee = (emp) => {
     'Coach' or whatever name you'd like.
 */
 
-//CODE HERE 
+addEmployee('Tink')
 
 /*
     Call the `getEmployees` method on the
@@ -149,4 +149,4 @@ getEmployee = (emp) => {
     that an employee was added.
 */
 
-//CODE HERE
+getEmployees(manager);
